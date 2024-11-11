@@ -19,15 +19,16 @@ colors = {
 line_colors = ['#47D0E8', '#EF9A45', '#8DF279', '#006DDB', '#D16C00', '#477A3D']
 static_columns = ['Level', 'Tier', 'Copies Wanted']
 var_columns = ['Unit Copies Owned', 'Tier Copies Owned']
-patch_current = '10.10'
-levels = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+patch_current = '14.23'
+levels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 tiers = [1, 2, 3, 4, 5]
-uniques = [12, 12, 12, 9, 7]
-copies = [29, 22, 16, 12, 10]
+uniques = [14, 13, 13, 12, 8]
+copies = [30, 25, 18, 10, 9]
 weights = [
         [100, 0, 0, 0, 0], [100, 0, 0, 0, 0], [75, 25, 0, 0, 0],
-        [60, 30, 10, 0, 0], [40, 35, 20, 5, 0], [25, 35, 30, 10, 0],
-        [19, 30, 35, 15, 1], [14, 20, 35, 25, 6], [10, 15, 25, 35, 15]
+        [55, 30, 15, 0, 0], [45, 33, 20, 2, 0], [30, 40, 25, 5, 0],
+        [19, 30, 40, 10, 1], [18, 25, 32, 22, 3], [15, 20, 25, 30, 10],
+        [5, 10, 20, 40, 25]
 ]
 
 
@@ -161,17 +162,17 @@ app.layout = html.Div([
                 ],
                 data=[
                     {'Scenario': 'A', 'Level': 4, 'Tier': 1, 'Copies Wanted': 5,
-                     'Unit Copies Owned': 6, 'Tier Copies Owned': 80
+                     'Unit Copies Owned': 6, 'Tier Copies Owned': 10
                      },
                     {'Scenario': 'B', 'Level': 4, 'Tier': 1, 'Copies Wanted': 5,
-                     'Unit Copies Owned': 13, 'Tier Copies Owned': 80
+                     'Unit Copies Owned': 13, 'Tier Copies Owned': 10
                     }
                 ],
                 dropdown={
                     'Level': {
                         'options': [
                             {'label': i, 'value': i}
-                            for i in range(2, 10)
+                            for i in range(2, 11)
                         ]
                     },
                     'Tier': {
